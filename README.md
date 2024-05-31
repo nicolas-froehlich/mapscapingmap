@@ -1,4 +1,4 @@
-This is the code for creating a map that shows locations and additional information about all of Daniel's interview partners in the MapScaping podcast.
+This is the code for creating a map that shows locations and additional information about all of Daniel's interview partners in the MapScaping podcast. 🗺️ 🌐 🎙️
 
 It contains:
 * a ```Python Notebook``` for scraping & preprocessing the data
