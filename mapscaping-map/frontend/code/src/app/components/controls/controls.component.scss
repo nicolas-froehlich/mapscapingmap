@@ -1,0 +1,24 @@
+.container {
+    padding: 20px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.topmargin {
+    margin-top: 20px;
+}
+
+.vertpad {
+    padding-bottom: 10px;
+}
+
+mat-slider {
+    min-width: 200px;
+}
+
+mat-radio-button {
+    margin-right: 20px;
+}

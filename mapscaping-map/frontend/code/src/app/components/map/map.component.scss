@@ -1,0 +1,26 @@
+.card {
+    height: 90vh;
+    position: relative;
+}
+
+.card-content {
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Position sidebar to the right */
+    z-index: 1000; /* Ensure the sidebar is above the card content */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+}
+
+.load-button {
+    margin-bottom: 10px; /* Space between buttons */
+}
