@@ -1,0 +1,12 @@
+name: MapScapingMap
+title: MapScapingMap
+username: nicolas-froehlich
+account: nicolas-froehlich
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12213647
+bundleId: 8770133
+url: https://nicolas-froehlich.shinyapps.io/MapScapingMap/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
