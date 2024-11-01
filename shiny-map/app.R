@@ -6,13 +6,15 @@ library(sf)
 library(leaflet)
 library(shinyWidgets)
 
-interviewees <- read_tsv('geocoded_addresses.tsv')
+interviewees <- read_tsv('data/geocoded_addresses.tsv')
 
 ui <- fluidPage(
   titlePanel("MapScaping Map"),
   sidebarLayout(
     sidebarPanel(
-      sliderInput('episode', 'Episode numbers', min = 1, max = 226, value = c(20, 70)),
+      sliderInput('episode', 'Episode number', min = 1, max = 237, value = c(20, 70)),
+      textInput('Title', 'Episode Title', value = ""),
+      textInput('full_name', 'Last Name', value = ""),
       pickerInput('categories', 'Categories', choices = NULL, selected = NULL, multiple = TRUE,
                   options = pickerOptions(actionsBox = TRUE, liveSearch = TRUE))
     ),
@@ -42,6 +44,20 @@ server <- function(input, output, session) {
       filter(!is.na(longitude) & !is.na(latitude)) %>%
       filter(Episode >= input$episode[1] & Episode <= input$episode[2])
     
+    
+    # Filter by episode title if input is provided
+    if (input$Title != "") {
+      df <- df %>%
+        filter(str_detect(tolower(Title), tolower(input$Title)))
+    }
+    
+    # Filter by last name if input is provided
+    if (input$full_name != "") {
+      df <- df %>%
+        filter(str_detect(tolower(full_name), tolower(input$full_name)))
+    }
+    
+    # Filter by categories if selected
     if (!is.null(input$categories) && length(input$categories) > 0) {
       df <- df %>%
         filter(str_detect(Categories, paste(input$categories, collapse = "|")))

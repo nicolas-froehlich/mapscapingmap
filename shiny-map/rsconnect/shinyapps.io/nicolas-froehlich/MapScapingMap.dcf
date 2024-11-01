@@ -5,8 +5,9 @@ account: nicolas-froehlich
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12213647
-bundleId: 8770133
+bundleId: 9303147
 url: https://nicolas-froehlich.shinyapps.io/MapScapingMap/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: .ipynb_checkpoints/app-checkpoint.R|.ipynb_checkpoints/geocoded_addresses-checkpoint.tsv|data/geocoded_addresses.csv|data/MapScaping_extended.csv|data/MapScaping_scraped.tsv|geocoded_addresses.tsv
